@@ -115,20 +115,37 @@ a {
   letter-spacing: 0.04em;
 }
 
-.section-content,
-.experience-list {
+/* Each label is a separate pill; flex-wrap fills each row naturally. */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 9px;
   margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tag {
+  max-width: 100%;
+  padding: 7px 13px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(218, 192, 163, 0.08);
   color: var(--text);
   font-size: 15px;
-  line-height: 1.7;
+  font-weight: 400;
+  line-height: 1.5;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  transition: background-color 180ms ease, color 180ms ease;
 }
 
-.experience-list {
-  padding-left: 20px;
-}
-
-.experience-list li + li {
-  margin-top: 3px;
+@media (hover: hover) {
+  .tag:hover {
+    background: var(--border);
+    color: var(--background);
+  }
 }
 
 .contact-list {
