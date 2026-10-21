@@ -102,6 +102,35 @@ a {
   background: var(--border);
 }
 
+.experience-section {
+  margin-bottom: 24px;
+}
+
+.section-heading {
+  margin: 0 0 10px;
+  color: var(--subtext);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.section-content,
+.experience-list {
+  margin: 0;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.experience-list {
+  padding-left: 20px;
+}
+
+.experience-list li + li {
+  margin-top: 3px;
+}
+
 .contact-list {
   display: grid;
   gap: 20px;
@@ -197,7 +226,8 @@ a {
 }
 
 .button-github:hover {
-  background: #214B7F;
+  background: var(--button);
+  color: var(--button-text);
   text-decoration: none;
 }
 
