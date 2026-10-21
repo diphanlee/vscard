@@ -1,0 +1,196 @@
+:root {
+  --background: #f5f6f8;
+  --card: #ffffff;
+  --text: #18181b;
+  --subtext: #71717a;
+  --border: #e4e4e7;
+  --button: #18181b;
+  --button-text: #ffffff;
+  --button-hover: #27272a;
+  --radius: 24px;
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: var(--background);
+  color: var(--text);
+  font-family:
+    Pretendard,
+    "Apple SD Gothic Neo",
+    "Noto Sans KR",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+.business-card {
+  width: min(100%, 420px);
+  padding: 36px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-image {
+  width: 112px;
+  height: 112px;
+  margin-bottom: 24px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  object-fit: cover;
+  background: #f4f4f5;
+}
+
+.name {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+}
+
+.job {
+  margin: 8px 0 0;
+  color: var(--subtext);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.divider {
+  height: 1px;
+  margin: 32px 0;
+  background: var(--border);
+}
+
+.contact-list {
+  display: grid;
+  gap: 20px;
+}
+
+.contact-item {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+}
+
+.contact-label {
+  color: var(--subtext);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.contact-value {
+  min-width: 0;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.5;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.contact-value:hover {
+  text-decoration: underline;
+}
+
+.placeholder {
+  color: #a1a1aa;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 32px;
+}
+
+.button {
+  min-height: 48px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 14px;
+  cursor: pointer;
+  transition:
+    background 160ms ease,
+    transform 160ms ease,
+    opacity 160ms ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.button-primary {
+  background: var(--button);
+  color: var(--button-text);
+}
+
+.button-primary:hover {
+  background: var(--button-hover);
+}
+
+.button-secondary {
+  background: #f4f4f5;
+  color: var(--text);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+  transform: none;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 16px;
+  }
+
+  .business-card {
+    padding: 28px 24px;
+  }
+
+  .actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

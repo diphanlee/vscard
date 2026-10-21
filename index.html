@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <title>웹 명함</title>
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <main class="business-card">
+    <section class="profile">
+
+      <img
+        class="profile-image"
+        src="./cat1.jpg"
+        alt="프로필 이미지"
+        onerror="this.style.display='none';"
+      />
+
+      <h1 class="name placeholder">
+        이름을 입력하세요
+      </h1>
+
+      <p class="job placeholder">
+        직군을 입력하세요
+      </p>
+
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="contact-list">
+
+      <div class="contact-item">
+        <span class="contact-label">
+          Email
+        </span>
+
+        <a
+          class="contact-value placeholder"
+          href="#"
+          id="email"
+          aria-disabled="true"
+        >
+          이메일을 입력하세요
+        </a>
+      </div>
+
+      <div class="contact-item">
+        <span class="contact-label">
+          Phone
+        </span>
+
+        <a
+          class="contact-value placeholder"
+          href="#"
+          id="phone"
+          aria-disabled="true"
+        >
+          전화번호를 입력하세요
+        </a>
+      </div>
+
+    </section>
+
+    <section class="actions">
+
+      <button
+        class="button button-primary"
+        id="emailButton"
+        type="button"
+        disabled
+      >
+        이메일 보내기
+      </button>
+
+      <button
+        class="button button-secondary"
+        id="copyButton"
+        type="button"
+        disabled
+      >
+        연락처 복사
+      </button>
+
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
