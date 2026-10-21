@@ -1,12 +1,12 @@
 :root {
-  --background: #f5f6f8;
-  --card: #ffffff;
-  --text: #18181b;
-  --subtext: #71717a;
-  --border: #e4e4e7;
-  --button: #18181b;
-  --button-text: #ffffff;
-  --button-hover: #27272a;
+  --background: #102C57;
+  --card: #0B1F3A;
+  --text: #F8F0E5;
+  --subtext: #D8C4A8;
+  --border: #DAC0A3;
+  --button: #DAC0A3;
+  --button-text: #102C57;
+  --button-hover: #E6D2BA;
   --radius: 24px;
   --shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
 }
@@ -67,12 +67,12 @@ a {
   border: 1px solid var(--border);
   border-radius: 50%;
   object-fit: cover;
-  background: #f4f4f5;
+  background: #102C57;
 }
 
 .name {
   margin: 0;
-  font-size: 30px;
+  font-size: 31px;
   font-weight: 750;
   line-height: 1.2;
   letter-spacing: -0.04em;
@@ -125,7 +125,7 @@ a {
 }
 
 .placeholder {
-  color: #a1a1aa;
+  color: #B8A58F;
 }
 
 .actions {
@@ -165,7 +165,7 @@ a {
 }
 
 .button-secondary {
-  background: #f4f4f5;
+  background: #163A69;
   color: var(--text);
 }
 
