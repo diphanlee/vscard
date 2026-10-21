@@ -1,3 +1,4 @@
+
 :root {
   --background: #102C57;
   --card: #0B1F3A;
@@ -51,6 +52,16 @@ a {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  transition:
+    transform 250ms ease,
+    box-shadow 250ms ease;
+}
+
+@media (hover: hover) {
+  .business-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.35);
+  }
 }
 
 .profile {
@@ -124,6 +135,10 @@ a {
   text-decoration: underline;
 }
 
+#email {
+  cursor: pointer;
+}
+
 .placeholder {
   color: #B8A58F;
 }
@@ -192,5 +207,9 @@ a {
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;
+  }
+
+  .business-card {
+    transition: none;
   }
 }
